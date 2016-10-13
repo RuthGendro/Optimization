@@ -522,15 +522,22 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
+  //moved elem variable declaration outside of the for loop so it doesn't create
+  // a new instance of the variable each loop
+  var elem;
+  // changed querySelector to getElementById and moved out of for loop
+  var movingPizzas = document.getElementById("movingPizzas1");
+  // Changed number of total pizzas to 36 - still enough to cover the page and provide the necessary effect
+  for (var i = 0; i < 36; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
+    // replaced basicLeft with style declaration and added px units
+    elem.style.left = (i % cols) * s + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    movingPizzas.appendChild(elem);
   }
   updatePositions();
 });
