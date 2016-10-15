@@ -373,18 +373,21 @@ var pizzaElementGenerator = function(i) {
   pizzaDescriptionContainer = document.createElement("div");
 
   pizzaContainer.classList.add("randomPizzaContainer");
-  pizzaContainer.style.width = "33.33%";
-  pizzaContainer.style.height = "325px";
+//  pizzaContainer.style.width = "33.33%";
+//  pizzaContainer.style.height = "325px";
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
-  pizzaImageContainer.style.width="35%";
+//  pizzaImageContainer.style.width="35%";
 
   pizzaImage.src = "images/pizza.png";
   pizzaImage.classList.add("img-responsive");
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
+  pizzaContainer.classList.add("col-md-4");
+  pizzaImageContainer.classList.add("col-xs-3 col-sm-4 col-md-5");
+  pizzaDescriptionContainer.classList.add("col-xs-9 col-sm-8 col-md-7");
 
 
-  pizzaDescriptionContainer.style.width="65%";
+//  pizzaDescriptionContainer.style.width="65%";
 
   pizzaName = document.createElement("h4");
   pizzaName.innerHTML = randomName();

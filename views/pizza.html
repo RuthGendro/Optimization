@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
-  <style>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-box-sizing:border-box}body{font-family:'Trebuchet MS',Helvetica,sans-serif;background:#000}input{background:grey;font-size:18px}form{display:inline-block}.centered{text-align:center}#pizzaSize{font-weight:800}.mover{position:fixed;width:256px;z-index:-1;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.randomPizzaContainer{float:left;display:flex}.randomPizzaContainer:after{content:"";display:table;clear:both}.container{background-color:rgba(240,60,60,.8)}@media all and (min-width:960px){body{font-size:18px}}@media all and (max-width:959px) and (min-width:600px){body{font-size:16px}}@media all and (max-width:599px) and (min-width:320px){body{font-size:12px}}</style>
+  <style>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-box-sizing:border-box}body{font-family:'Trebuchet MS',Helvetica,sans-serif;background:#000}input{background:grey;font-size:18px}form{display:inline-block}.centered{text-align:center}#pizzaSize{font-weight:800}.mover{position:fixed;width:256px;z-index:-1;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.randomPizzaContainer{float:left;display:flex}.randomPizzaContainer:after{content:"";display:table;height:325px;clear:both}.container{background-color:rgba(240,60,60,.8)}@media all and (min-width:960px){body{font-size:18px}}@media all and (max-width:959px) and (min-width:600px){body{font-size:16px}}@media all and (max-width:599px) and (min-width:320px){body{font-size:12px}}</style>
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 </head>
 
@@ -76,8 +76,8 @@
       </div>
     </div>
     <div id="locations" class="row">
-      <div class="col-md-12">
-        <h2 style="text-align: center">Locations!</h2>
+      <div class="col-md-12 centered">
+        <h2>Locations!</h2>
         <div class="row">
           <div class="col-md-6">
             <h3>Pizza Road</h3>
@@ -91,23 +91,23 @@
       </div>
     </div>
     <div id="pizzaGenerator" class="row">
-      <div class="col-md-12">
-        <h2 style="text-align: center">Our Pizzas!</h2>
+      <div class="col-md-12 centered">
+        <h2>Our Pizzas!</h2>
         <div class="row">
           <div class="col-md-12">
             <em>What size pizza would you like? Use the slider below to change pizza sizes.</em>
           </div>
-          <div id="pizzaSize" class="col-md-6">Medium</div>
+          <div id="pizzaSize" class="col-md-12">Medium</div>
           <div class="col-md-12">
             <input id="sizeSlider" type="range" min="1" max="3" value="2" step="1" onchange="resizePizzas(this.value)"></input>
           </div>
         </div>
         <div id="randomPizzas" class="row">
-          <div id="pizza0" class="randomPizzaContainer" style="width:33.33%; height: 325px;">
-            <div style="width:35%">
+          <div id="pizza0" class="col-md-4 randomPizzaContainer">
+            <div class="col-xs-3 col-sm-4 col-md-5">
               <img src="images/pizza.png" class="img-responsive">
             </div>
-            <div style="width:65%">
+            <div class="col-xs-9 col-sm-8 col-md-7">
               <h4>The Udacity Special</h4>
               <ul>
                 <li>Turkey</li>
@@ -120,11 +120,11 @@
               </ul>
             </div>
           </div>
-          <div id="pizza1" class="randomPizzaContainer" style="width:33.33%; height: 325px;">
-            <div style="width:35%">
+          <div id="pizza1" class="col-md-4 randomPizzaContainer">
+            <div class="col-xs-3 col-sm-4 col-md-5">
               <img src="images/pizza.png" class="img-responsive">
             </div>
-            <div style="width:65%">
+            <div class="col-xs-9 col-sm-8 col-md-7">
               <h4>The Cameron Special</h4>
               <ul>
                 <li>Chicken</li>
