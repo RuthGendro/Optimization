@@ -383,8 +383,8 @@ var pizzaElementGenerator = function(i) {
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
   pizzaContainer.classList.add("col-md-4");
-  pizzaImageContainer.classList.add("col-xs-3 col-sm-4 col-md-5");
-  pizzaDescriptionContainer.classList.add("col-xs-9 col-sm-8 col-md-7");
+  pizzaImageContainer.classList.add("col-xs-4 col-sm-4 col-md-5");
+  pizzaDescriptionContainer.classList.add("col-xs-8 col-sm-8 col-md-7");
 
 
 //  pizzaDescriptionContainer.style.width="65%";
